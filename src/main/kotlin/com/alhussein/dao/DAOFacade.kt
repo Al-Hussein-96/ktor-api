@@ -1,11 +1,11 @@
 package com.alhussein.dao
 
-import com.alhussein.models.Article
+import com.alhussein.models.User
 
 interface DAOFacade {
-    suspend fun allArticles(): List<Article>
-    suspend fun article(id: Int): Article?
-    suspend fun addNewArticle(title: String, body: String): Article?
-    suspend fun editArticle(id: Int, title: String, body: String): Boolean
-    suspend fun deleteArticle(id: Int): Boolean
+    suspend fun allUsers(): List<User>
+    suspend fun user(id: Int): User?
+    suspend fun addNewUser(user: User): User?
+    suspend fun editUser(id: Int, name: String, status: Int): Boolean
+    suspend fun deleteUser(id: Int): Boolean
 }

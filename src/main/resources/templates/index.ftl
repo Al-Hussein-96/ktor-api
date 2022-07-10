@@ -1,13 +1,13 @@
-<#-- @ftlvariable name="articles" type="kotlin.collections.List<com.alhussein.models.Article>" -->
+<#-- @ftlvariable name="users" type="kotlin.collections.List<com.alhussein.models.User>" -->
 <#import "_layout.ftl" as layout />
 <@layout.header>
-    <#list articles?reverse as article>
+    <#list users?reverse as article>
         <div>
             <h3>
-                <a href="/articles/${article.id}">${article.title}</a>
+                <a href="/articles/${article.id}">${article.name}</a>
             </h3>
             <p>
-                ${article.body}
+                ${article.status}
             </p>
         </div>
     </#list>
